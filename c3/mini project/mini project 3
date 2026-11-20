@@ -1,0 +1,30 @@
+attendance = {}
+
+n = int(input("Enter number of students: "))
+
+for i in range(n):
+
+    name = input("Enter student name: ")
+
+    status = input("Enter P for Present or A for Absent: ")
+
+    if status.upper() == "P":
+        attendance[name] = "Present"
+
+    else:
+        attendance[name] = "Absent"
+
+
+print("\nATTENDANCE REPORT")
+
+for name, status in attendance.items():
+
+    print(name, "-", status)
+
+
+present = list(attendance.values()).count("Present")
+
+absent = list(attendance.values()).count("Absent")
+
+print("Total Present:", present)
+print("Total Absent:", absent)
